@@ -1,78 +1,148 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-body{
-    
-    background-color: brown;
-}
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
 
-.cabecero {
-  background-color:  rgb(107, 1, 1);
-  height: 150px;
-  
-}
+        body {
+            background-color: rgb(138, 21, 21);
+        }
 
+        .cabecero {
+            background-color: rgb(107, 1, 1);
+            height: 200px;
+            text-align: center;
+        }
 
+        .icono{
+            height: 115px;
+            width: 115px;
+            border-radius: 8px;
+        }
+        h1{
+            color: white;
+        }
 
+        .icono1{
+            position: absolute;
+            top: 40px;
+            left: 53px;
+            
+        }
 
-img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-  float: left;
-    width: 24%;
-    height: 50%;
-    position: relative;
-    border-radius: 8px;
-    margin-top: 5%;
-}
+        .icono2{
+            position: absolute;
+            top: 40px;
+            right: 53px;
+        }
 
-.button {
-  transition-duration: 0.4s;
-  height: 70px;
-  width:  100px;
-  position: relative;
-  border-radius: 8px;
-  float: left;
-  margin-top: 10%;
-  margin-left: 45%;
-  margin-bottom: 20%;
-  background-color: rgb(77, 2, 2);
-  color: white;
-}
+        .cabecero h1{
+            padding-top: 60px;
+            font-size: 64px;
+        }
 
-.button:hover {
-  background-color: brown; /* Green */
-  color: white;
-}
+        .fotos{
+            margin: auto;
+            padding-left: 70px;
+        }
 
-</style>
+        .imagen {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            float: left;
+            width: 24%;
+            height: 50%;
+            position: relative;
+            border-radius: 8px;
+            margin-top: 5%;
+        }
+
+        .button {
+            transition-duration: 0.4s;
+            height: 70px;
+            width: 100px;
+            position: relative;
+            border-radius: 8px;
+            float: left;
+            margin-top: 5%;
+            margin-left: 47%;
+            margin-bottom: 30%;
+            background-color: rgb(77, 2, 2);
+            color: white;
+        }
+
+        .button:hover {
+            background-color: brown;
+            /* Green */
+            color: white;
+        }
+
+         .cabecero {
+            background-color: rgb(107, 1, 1);
+            height: 200px;
+            text-align: center;
+        }
+
+        .pie {
+            background-color: rgb(107, 1, 1);
+            height: 150px;
+            text-align: center;
+            padding-top: 30px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .pie img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            vertical-align: middle;
+            border-radius: 8px;
+        }
+
+        .pie a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+    </style>
 </head>
+
 <body>
-
-   <div class="cabecero">cabecero</div>
-
-<div id="img">
-    <div class="img1">
-        <img src="Animales/1.jpg">
-        <img src="Animales/3.jpg">
-        <img src="Animales/4.jpg">
-        <img src="Animales/2.jpg">
+    <div class="cabecero">
+        <img class="icono1 icono" src="descarga.jpeg">
+        <h1>Centro de Adopción</h1>
+        <img class="icono2 icono" src="descarga (1).png">
     </div>
-
     <div>
-        <button class="button">Adoptar</button>
-
+        <div class="fotos">
+            <img src="Animales/1.jpg" class="imagen">
+            <img src="Animales/3.jpg" class="imagen">
+            <img src="Animales/4.jpg" class="imagen">
+            <img src="Animales/2.jpg" class="imagen">
+        </div>
+        <div>
+            <button class="button">Adoptar</button>
+        </div>
+        <div class="pie">
+            
+                <img class="instagram" src="descarga (3).png">
+            </a>
+           
+                <img class="facebook" src="descarga (5).png">
+            </a>
+        </div>
     </div>
-
-    <div>
-       
-    </div>
-
-    
-</div>
 </body>
-</html>
 
+</html>
