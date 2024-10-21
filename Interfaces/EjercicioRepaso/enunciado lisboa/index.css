@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    overflow:hidden;
+    margin: 0;
+    padding:0;
+}
+#cabecero{
+
+    width: 100%;
+    height: 10vh;
+    position:relative;
+}
+#cuerpo b{
+    color:red;
+}
+
+#cuerpo{
+    background-image: url(imagenes/lisboaplaza.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: cover; 
+    position:relative;
+    width: 100%;
+    height: 90vh;
+}
+p{
+    text-align: center;
+    padding-top: 40px;
+}
+h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 3em;
+}
+#logo{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+#logo.hover{
+    box-shadow:solid 2px black;
+}
+.hiper{
+    text-decoration: none;
+    color:black;
+    float:right;
+    position: relative;
+    margin-right: 6%;
+    margin-top: 2%;
+    width: 10%;
+    text-align:center;
+    border-bottom:solid 2px black ;
+
+}
+a:hover{
+    background-color: black;
+    color:white;
+}
+#pie{
+    width: 80%;
+    margin-top: 25%;
+    margin-left:10%;
+    position:relative;
+    height: 15vh;
+}
+.info{
+    width: 33%;
+    height: 100%;
+    margin-right: 0.2%;
+    text-align: center;
+    float:left;
+    position: static;
+    background-color: aliceblue;
+    border:solid 1px black
+}
+@media screen and (max-width:800px) {
+    #cabecero{
+        margin:0%;
+        height: auto;
+        padding-top: 40px;
+    }
+    body{
+        background-image: url(imagenes/lisboaplaza.webp);
+        background-size: cover;
+    }
+    .hiper{
+        width:96%;
+        margin:0 2% 0 2%;
+        border:none;
+    }
+    #logo{
+        display:none;
+    }
+    #pie{
+        margin-top:65%;
+    }
+    #pie h1 {
+        font-size:2em;
+    }
+    #cuerpo{
+
+        background: none;
+    }
+}
+
