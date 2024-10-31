@@ -68,6 +68,32 @@ animation: letrasjuntar 2s ease-in-out forwards;
   text-align: left;
 }
 
+#pie{
+    width: 100%;
+    height: 100%;
+   
+}
+.a100{
+    padding: 35px 0px 0px 80px;
+}
+
+.descarga{
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    padding: 1rem; /*nose que es esto 1 rem*/
+    
+}
+
+.icono{
+    width: 30%;
+    height: 70%;
+    padding: 0px 0px 0px 80px ;
+  
+
+}
+
+
 @keyframes letrasjuntar {
     from {
          letter-spacing: 12px;
