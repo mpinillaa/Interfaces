@@ -1,18 +1,15 @@
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 5px #ff9966;
-    font-family: sans-serif;
-   
-}
+
 
 body{
+    font-family: sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-size: 13px;
+    width: 100%;
+    height: 100%;
 }
 
 .container{
@@ -22,21 +19,34 @@ body{
     gap: 10px;  
     background-color: rgb(167, 161, 161);
     width: 960px;
+    justify-content: center;
     
+}
+
+a{
+    position: absolute;
+    padding-top: 450px;
+    padding-left: 50px;
 }
 
 .uno{
     background-image: url(hombrepeque¤o.jpg);
     background-size: cover;
     grid-row: 1 / 4;
+    margin: 15px;
+    border-width: 5px white;
+    
 }
 
 .dos{
-
+     grid-column: 2 / 5;
+    text-align: center;
 }
 
 h1{
     color: #ff9966;
+    text-align: center;
+    margin-top: 25px;
 }
 
 
@@ -49,3 +59,43 @@ h1{
 }
 
 
+.logos{
+    width: 30px;
+    float:right;
+    padding: 30px 10px;
+}
+
+.cuatro{
+    background-color: white;
+    text-align: center;
+}
+
+.cuatro:hover{
+    p{
+        display:none;
+    }
+}
+
+.cinco{
+    background-color: white;
+    text-align: center;
+}
+.cinco:hover{
+    p{
+        display:none;
+    }
+}
+
+.seis{
+    background-color: white;
+    text-align: center;
+}
+.seis:hover{
+    p{
+        display:none;
+    }
+}
+
+.siete{
+    grid-column: 2 / 5;
+}
