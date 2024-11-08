@@ -20,7 +20,7 @@ body{
     background-color: rgb(167, 161, 161);
     width: 960px;
     justify-content: center;
-    
+    border: 4px #ff9966 solid;
 }
 
 a{
@@ -35,12 +35,12 @@ a{
     grid-row: 1 / 4;
     margin: 15px;
     border-width: 5px white;
-    
+    border: 3px white solid;
 }
 
 .dos{
      grid-column: 2 / 5;
-    text-align: center;
+   margin-left: 50px;
 }
 
 h1{
@@ -61,7 +61,6 @@ h1{
 
 .logos{
     width: 30px;
-    float:right;
     padding: 30px 10px;
 }
 
@@ -98,4 +97,8 @@ h1{
 
 .siete{
     grid-column: 2 / 5;
+    text-align: right;
+}
+.lista{
+    list-style-position: inside;
 }
