@@ -50,8 +50,6 @@ h1{
 }
 
 
-
-
 .imagenes{
     background-color: white;
     padding: 20px;
@@ -67,6 +65,7 @@ h1{
 .cuatro{
     background-color: white;
     text-align: center;
+    position: relative;
 }
 
 .cuatro:hover{
@@ -78,6 +77,8 @@ h1{
 .cinco{
     background-color: white;
     text-align: center;
+    position: relative;
+   
 }
 .cinco:hover{
     p{
@@ -88,11 +89,15 @@ h1{
 .seis{
     background-color: white;
     text-align: center;
+    position: relative;
+ 
 }
 .seis:hover{
-    p{
-        display:none;
-    }
+    transition: all 0.15s ease-in-out;
+}
+
+.seis:hover > p{
+    display: none;
 }
 
 .siete{
@@ -101,4 +106,31 @@ h1{
 }
 .lista{
     list-style-position: inside;
+}
+
+p{
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    translate: -50% 0%;    
+}
+
+.portatil, .aspas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: all 1.15s ease-in-out;
+}
+
+.aspas{
+    opacity: 0;
+}
+
+.seis:hover > .portatil{
+    opacity: 0;
+}
+
+.seis:hover > .aspas{
+    opacity: 1;
 }
