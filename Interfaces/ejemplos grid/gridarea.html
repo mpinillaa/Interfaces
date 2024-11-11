@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Grid con Áreas</title>
+  <style>
+    /* Estructura principal */
+    .grid-container {
+      display: grid;
+      grid-template-areas: 
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+      grid-template-columns: 1fr 2fr 2fr;
+      grid-template-rows: 10vh 80vh 10vh;
+      gap: 10px;
+      min-height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #3b5998;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #8b9dc3;
+      color: white;
+      padding: 20px;
+    }
+
+    .content {
+      grid-area: content;
+      background-color: #dfe3ee;
+      padding: 20px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #3b5998;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .grid-container {
+        
+        grid-template-areas: 
+          "header"
+          "content"
+          "sidebar"
+          "footer";
+          
+        grid-template-columns: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="header">Encabezado</div>
+  <div class="sidebar">Barra Lateral</div>
+  <div class="content">Contenido Principal</div>
+  <div class="footer">Pie de Página</div>
+</div>
+
+</body>
+</html>

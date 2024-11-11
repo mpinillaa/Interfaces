@@ -30,7 +30,7 @@ a{
 }
 
 .uno{
-    background-image: url(hombrepeque¤o.jpg);
+    background-image: url(imagenes/hombrepeque¤o.jpg);
     background-size: cover;
     grid-row: 1 / 4;
     margin: 15px;
@@ -118,9 +118,10 @@ p{
 .portatil, .aspas{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%;             /*  top: 0%;
+                               left 0%;  tambien sirve esto         */
     translate: -50% -50%;
-    transition: all 1.15s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
 .aspas{
@@ -133,4 +134,44 @@ p{
 
 .seis:hover > .aspas{
     opacity: 1;
+}
+
+@media only screen and (max-width: 700px){
+    .container{
+        max-width: 100%;
+        grid-template-columns: 100%;
+        
+    }
+
+    .uno{
+        grid-column: 1;  /* tambien se puede poner 1/2  */
+    }
+
+    .dos{
+        grid-column: 1;
+    }
+
+    .cuatro{
+        grid-column: 1;
+        height: 220px;
+    }
+
+    .cinco{
+        grid-column: 1;
+        height: 220px;
+    }
+
+    .seis{
+        grid-column: 1;
+        height: 220px;
+    }
+
+    .siete{
+        grid-column: 1;
+        padding-top: 20px;
+       
+    }
+    .cinco , .seis{
+        margin: 10px;
+    }
 }
