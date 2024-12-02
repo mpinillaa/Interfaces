@@ -1,0 +1,177 @@
+
+
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 13px;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    display: grid;                       /* Activa CSS Grid en el contenedor */
+    grid-template-columns: 380px 176px 176px 176px; /* Anchos de columnas específicos */
+    grid-template-rows: 240px 200px 80px;     /* Alturas de filas específicas */
+    gap: 10px;  
+    background-color: rgb(167, 161, 161);
+    width: 960px;
+    justify-content: center;
+    border: 4px #ff9966 solid;
+}
+
+a{
+    position: absolute;
+    padding-top: 450px;
+    padding-left: 50px;
+}
+
+.uno{
+    background-image: url(imagenes/hombrepeque¤o.jpg);
+    background-size: cover;
+    grid-row: 1 / 4;
+    margin: 15px;
+    border-width: 5px white;
+    border: 3px white solid;
+}
+
+.dos{
+     grid-column: 2 / 5;
+   margin-left: 50px;
+}
+
+h1{
+    color: #ff9966;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.imagenes{
+    background-color: white;
+    padding: 20px;
+    width: 125px;
+}
+
+
+.logos{
+    width: 30px;
+    padding: 30px 10px;
+}
+
+.cuatro{
+    background-color: white;
+    text-align: center;
+    position: relative;
+}
+
+.cuatro:hover{
+    p{
+        display:none;
+    }
+}
+
+.cinco{
+    background-color: white;
+    text-align: center;
+    position: relative;
+   
+}
+.cinco:hover{
+    p{
+        display:none;
+    }
+}
+
+.seis{
+    background-color: white;
+    text-align: center;
+    position: relative;
+ 
+}
+.seis:hover{
+    transition: all 0.15s ease-in-out;
+}
+
+.seis:hover > p{
+    display: none;
+}
+
+.siete{
+    grid-column: 2 / 5;
+    text-align: right;
+}
+.lista{
+    list-style-position: inside;
+}
+
+p{
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    translate: -50% 0%;    
+}
+
+.portatil, .aspas{
+    position: absolute;
+    top: 50%;
+    left: 50%;             /*  top: 0%;
+                               left 0%;  tambien sirve esto         */
+    translate: -50% -50%;
+    transition: all 1.5s ease-in-out;
+}
+
+.aspas{
+    opacity: 0;
+}
+
+.seis:hover > .portatil{
+    opacity: 0;
+}
+
+.seis:hover > .aspas{
+    opacity: 1;
+}
+
+@media only screen and (max-width: 700px){
+    .container{
+        max-width: 100%;
+        grid-template-columns: 100%;
+        
+    }
+
+    .uno{
+        grid-column: 1;  /* tambien se puede poner 1/2  */
+    }
+
+    .dos{
+        grid-column: 1;
+    }
+
+    .cuatro{
+        grid-column: 1;
+        height: 220px;
+    }
+
+    .cinco{
+        grid-column: 1;
+        height: 220px;
+    }
+
+    .seis{
+        grid-column: 1;
+        height: 220px;
+    }
+
+    .siete{
+        grid-column: 1;
+        padding-top: 20px;
+       
+    }
+    .cinco , .seis{
+        margin: 10px;
+    }
+}

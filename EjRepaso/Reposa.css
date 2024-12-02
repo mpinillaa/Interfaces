@@ -1,0 +1,82 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body{
+    background-color: #f0f8ff;
+}
+
+#header{
+    text-align: center;
+    color: white;
+    background-color: #0056b3;
+    height: 15vh;
+    padding-top: 30px;
+    border-radius: 15px;
+}
+
+.link{
+    text-decoration: none;
+    word-spacing: 3em;
+    padding: 10px;
+  
+}
+
+#header a{
+   
+    color: white;
+}
+
+.cuerpo{
+    width: 100%;
+    display: flex;
+}
+
+.informacion{
+    height: 80vh;
+    width: 15%;
+    background-color: #ff9800;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.cajas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height:10% ;
+    width: 80%;
+    margin-left: 15%;
+    margin: 15px;
+    margin-left: 20px;
+    border-radius: 15px;
+    background-color:#ffcc80 ;
+}
+
+.informacion :hover{
+    transform: scale(1.1);
+
+}
+
+.cajas:hover{
+    margin-left: 20px;
+}
+
+.fondo{
+    background-image: url(teatro.jpg);
+    height: 80vh;
+    width: 85%;
+    border-radius: 15px;
+    margin: 13px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-size: cover;
+}

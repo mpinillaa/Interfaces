@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    overflow:hidden;
+    margin: 0;
+    padding:0;
+}
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#titulo{
+    width: 100%;
+    height: 10vh;
+    background-color:rgb(255,95,73);
+    text-align: center;
+    padding-top: 2vh;
+    letter-spacing: 12px;
+    color:white;
+    font-size:4em;
+}
+#cabeza{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 5vh;
+    padding-top: 15px;
+    border-bottom: 1px solid rgb(255,95,73);
+}
+#cabeza > a{
+    text-align: center;
+    letter-spacing: 0.25em;
+    text-decoration: none;
+    color:rgb(255,95,73);
+}
+#cabeza > a:hover{
+    color:black;
+    text-shadow: 2px 2px 4px black;
+}
+#contenedor{
+    width: 100%;
+    height: 70vh;
+    margin-top: 10vh;
+    position: relative;
+}
+#formulario{
+    width: 150px;
+    height: 200px;
+    margin-top: 250px;
+    margin-left: 100px;
+    background-color:rgb(255,95,73);
+    padding: 50px 0 50px 20px;
+    position: absolute;
+}
+.b{
+    display: block;
+    position: relative;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+#fondo{
+    width: 100%;
+    height: 70vh;
+    position:absolute;
+}
+#pie{
+    color:rgb(255,95,73);
+    text-align: right;
+    position: relative;
+    padding-top: 10px;
+    padding-right: 10px;
+}
