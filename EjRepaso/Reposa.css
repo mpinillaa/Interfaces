@@ -60,7 +60,7 @@ body{
     background-color:#ffcc80 ;
 }
 
-.informacion :hover{
+.informacion:hover{
     transform: scale(1.1);
 
 }
@@ -80,3 +80,35 @@ body{
     padding-left: 20px;
     background-size: cover;
 }
+
+.cuerpo2{
+    width: 80%;
+    height: 50%;
+    background-color: aqua;
+}
+
+h2{
+    font-weight: bold;
+}
+
+.lista{
+    margin-left: 20%;
+}
+
+.Precio{
+    margin-left: 20%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cuadros{
+    height: 100px;
+    width: 30vh;
+    display: flex;
+    align-items: center;
+    color: #0056b3;
+    background-color: aqua;
+}
+
+
