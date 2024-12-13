@@ -1,0 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#cabeza {
+    display: flex;
+    text-align: center;
+    height: 15vh;
+    color: white;
+    background-color: #0056b3;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform:translate(12px,19px);
+}
+#cabeza a {
+    color: white;
+    text-decoration: none;
+}
+
+.link {
+    padding-top: 20px;
+    word-spacing: 3em;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: 15% 84%;
+    gap: 1%;
+    min-height: 80vh; 
+}
+
+
+#sidebar {
+	position: relative;
+    display: grid;
+    background-color: #ff9800;
+    color: white;
+    padding:10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 80px 80px 80px 80px;
+    transform:translate(1.1);
+    transition: transform 0.3s ease;
+}
+
+#sidebar :hover{
+    transform: translateX(5px);
+}
+
+#subcajas {
+    background-color: #ffcc80;
+    border-radius: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left:5px;
+    padding-top: 10px;
+    /*height: 30px;*/
+}
+
+
+#cabecera {
+    display: grid;
+    background-image: url(teatro.jpg);
+    background-size: cover;
+    height: 80vh;
+}
+
+#cabecera h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#beneficios {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#precios {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.item {
+    background-color: #f0f8ff;
+    width: 30%;
+    text-align: center;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.item h4 {
+    color: #0056b3;
+}
+
+.item h1 {
+    color: #ff6f00;
+}
+
+#formulario {
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto 1fr;
+    width: 50%;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+.boton{
+    grid-column: 1 / -1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+    background-color:#ff6f00
+}
+
+.et{
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 5px;
+}
+
+#pie{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    height: 80px;
+    width: 100%;
+    position: relative; 
+}
+
+@media only screen and (max-width: 700px) {
+
+    .link {
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    height: 100px;
+    }
+    #cabeza{
+        height: 200px;
+    }
+    #contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+    #sidebar h1{
+        text-align: center;
+    }
+    #beneficios h3{
+        text-align: center;
+    }
+    #beneficios{
+        padding-left: 20px;
+    }
+    #precios{
+        display: block;
+        flex-direction: column;
+    }
+    #item{
+        padding-top: 20px;
+        gap: 20px;
+    }
+}

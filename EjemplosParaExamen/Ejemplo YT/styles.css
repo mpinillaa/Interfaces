@@ -1,0 +1,309 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 1px blue solid;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: white;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 15vh 85vh;
+  grid-template-areas:
+    "arriba arriba"
+    "lado contenido";
+  overflow-x: hidden; /*para que no se te superponga las cosas, te quita la raya roja*/
+  gap: 10px; /*te pone el espacio entre filas y columnas*/
+
+  /*height: auto;  para que no se te salga del recuadro la imagen o loque sea*/
+
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  grid-area: arriba;
+  background: linear-gradient(
+    45deg,
+    rgb(255, 111, 111) 0%,
+    rgb(127, 127, 0) 50%,
+    rgb(97, 97, 255) 100%
+  );
+}
+
+.cabecera-contenedor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.medio {
+  width: 732px;
+}
+
+.sidebar {
+  grid-area: lado;
+  background-color: cadetblue;
+  z-index: 10000;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar:hover {
+  scale: 1.1;
+}
+
+.sidebar-btn {
+  padding: 10px;
+  margin: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-btn:hover {
+  rotate: -360deg;
+}
+
+.content {
+  grid-area: contenido;
+  background-color: rgb(24, 10, 0);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  translate: 100vh 0;
+  opacity: 0;
+  animation: entrada 2s ease-in-out forwards;
+}
+
+@keyframes entrada {
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+.content-caja {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-img {
+  overflow: hidden;
+  height: 80%;
+}
+
+.content-img > img {
+  object-fit: cover;
+  transition: scale 0.3s ease-in-out;
+}
+
+.content-img > img:hover {
+  scale: 3;
+}
+
+.texto {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 20vh 70vh;
+    grid-template-areas: none;
+  }
+  .cabecera {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+  .sidebar {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+  .content {
+    grid-column: 1/-1;
+    grid-row: 3/-1;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+
+/*Tipos de display
+1.1 block
+Los elementos con display: block ocupan todo el ancho disponible y siempre inician en una nueva línea.
+Ejemplos comunes: <div>, <p>, <h1>.
+
+<div style="display: block; background-color: lightblue; padding: 10px;">
+  Soy un elemento bloque.
+</div>
+
+
+Propiedades comunes:
+width y height para ajustar tamaño.
+margin y padding para espaciados.
+border para añadir bordes.
+
+---
+1.2 inline
+Ocupan solo el ancho de su contenido y no fuerzan un salto de línea.
+Ejemplos comunes: <span>, <a>, <strong>.
+
+<span style="display: inline; color: red;">
+  Soy un texto en línea.
+</span>
+
+
+Propiedades comunes:
+color para el color del texto.
+font-size y font-family para la tipografía.
+No admiten width ni height.
+
+---
+
+1.3 inline-block
+Combina características de block e inline. Se comporta como un elemento en línea pero permite ajustar tamaño.
+
+<div style="display: inline-block; width: 100px; height: 50px; background-color: lightgreen;">
+  Inline-block
+</div>
+
+
+---
+
+1.4 flex
+Permite crear diseños dinámicos y alineación flexible de los elementos hijos.
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px; background-color: lightcoral;">
+  <div style="background-color: white; padding: 10px;">Elemento 1</div>
+  <div style="background-color: white; padding: 10px;">Elemento 2</div>
+</div>
+Propiedades principales:
+flex-direction: Dirección (row, column).
+justify-content: Alineación horizontal.
+align-items: Alineación vertical.
+
+---
+
+1.5 grid
+Usado para crear cuadrículas en dos dimensiones.
+
+<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; background-color: lightyellow;">
+  <div style="background-color: lightgray;">Columna 1</div>
+  <div style="background-color: lightgray;">Columna 2</div>
+</div>
+
+
+Propiedades principales:
+grid-template-rows, grid-template-columns: Define filas y columnas.
+gap: Espaciado entre elementos.
+
+---
+
+1.6 none
+Oculta un elemento sin eliminarlo del DOM.
+
+<p style="display: none;">Este texto está oculto.</p>
+---
+
+Tipos de unidades de medida
+| Unidad  | Descripción                                       | Ejemplo         |
+|---------|---------------------------------------------------|-----------------|
+| px    | Medida fija en píxeles.                          | width: 100px; |
+| em    | Relativa al tamaño de fuente del elemento padre. | font-size: 2em; |
+| rem   | Relativa al tamaño de fuente raíz.               | font-size: 1.5rem; |
+| vh    | Porcentaje del alto del viewport.                | height: 50vh; |
+| vw    | Porcentaje del ancho del viewport.               | width: 80vw; |
+| ch    | Relativa al ancho del carácter "0".              | width: 10ch; |
+| fr    | Fracción del espacio disponible en grid.         | 1fr 2fr;      |
+
+Ejemplo de uso con vh y vw:
+<div style="width: 50vw; height: 50vh; background-color: lightblue;">
+  Ocupo la mitad del viewport.
+</div>
+
+
+---
+
+Propiedades comunes
+3.1 Texto
+<p style="color: blue; font-size: 20px; text-align: center; line-height: 1.5;">
+  Ejemplo de texto estilizado.
+</p>
+
+
+color: Cambia el color del texto.
+font-size: Define el tamaño.
+text-align: Alinea el texto (left, center, right).
+line-height: Ajusta el espaciado entre líneas.
+
+---
+
+3.2 Fondos
+<div style="background-color: lightpink; background-image: url('imagen.jpg'); background-size: cover;">
+  Fondo con color e imagen.
+</div>
+
+
+background-color: Color de fondo.
+background-image: Imagen de fondo.
+background-size: Tamaño (cover, contain).
+
+---
+3.3 Bordes y sombras
+<div style="border: 2px solid black; border-radius: 10px; box-shadow: 5px 5px 10px gray;">
+  Caja con bordes y sombra.
+</div>
+
+
+border: Define el borde.
+border-radius: Esquinas redondeadas.
+box-shadow: Sombra alrededor del elemento.
+
+---
+
+3.4 Espaciados
+<div style="margin: 20px; padding: 10px; background-color: lightgray;">
+  Caja con margen y relleno.
+</div>
+
+
+margin: Espaciado externo.
+padding: Espaciado interno.
+
+---
+
+Transiciones y animaciones
+4.1 Transiciones
+<div style="transition: all 0.3s ease;">
+  Hover para ver transición.
+</div>
+
+
+transition: Cambios suaves de propiedades.
+
+---
+
+4.2 Animaciones
+<div style="animation: ejemplo 2s infinite;">
+  Elemento animado.
+</div>
+
+<style>
+@keyframes ejemplo {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>
+
+
+@keyframes: Define los pasos de la animación.
+animation: Aplica la animación al elemento.
+*/

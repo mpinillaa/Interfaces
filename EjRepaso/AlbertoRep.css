@@ -1,0 +1,200 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#cabeza{
+    background-color: #0056b3;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 15vh;
+    margin-bottom: 10px;
+}
+#links{
+    word-spacing: 3em;
+    padding: 10px;
+}
+#cabeza a{
+    text-decoration: none;
+    color:white; 
+    transform: scale(1.1);
+}
+#cuerpo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+#info{
+    background-color: #ff6f00;
+    width: 15%;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    border:1px solid #ff9800;
+    border-radius:7px 7px 7px 7px ;
+    transition:transform 0.3s ease;
+    z-index: 4;
+}
+.grid{
+    width: 80%;
+    height: 5vh;
+    margin:10px;
+    padding-left: 7px;
+    background-color:#ff9800;
+    border:1px solid #ff9800;
+    border-radius:7px 7px 7px 7px ;
+}   
+.grid:hover{
+    margin-left: 20px;
+}
+#info:hover{
+    transform: scale(1.1);
+}
+#main{
+    width: 85%;
+    margin-left: 10px;
+}
+#imagen{
+    background-image: url(teatro.jpg);
+    background-size: cover; /*para que no se duplique*/
+    height: 80vh;
+}
+#imagen h2{
+    padding-left: 40px;
+}
+#beneficios{
+    margin-left: 100px;
+}
+h2{
+    margin:10px 0px 10px 0px;
+}
+#precio{
+    display:flex;
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    justify-content: space-around; /*deja espacio entre medias*/
+    margin-top: 10px;
+}
+.oferta{
+    background-color: whitesmoke;
+    border: 1px whitesmoke solid;
+    border-radius: 5px 5px 5px 5px;
+    width: 30%;
+    height: 100px;
+    box-shadow: 5px 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.oferta > h2{
+    color:#ff6f00;
+}
+.oferta > p{
+    color:#0056b3;
+}
+.oferta:hover{
+    margin-bottom: 5px;
+    box-shadow: 10px 10px 15px;
+}
+form{
+    display: grid;
+    margin:auto;
+    grid-template-columns:auto 1fr;
+    position: relative;
+    gap:10px;
+    width:50%;
+}
+.texto{
+    box-shadow: 1px 1px 2px;
+    border:1px solid black;
+    border-radius: 4px 4px 4px 4px;
+    height: 30px;
+}
+.et{
+    display:flex;
+    align-items: center;
+    font-weight: bold;
+}
+#boton{
+    color:white;
+    background-color:#ff9800;
+    border-radius: 5px 5px 5px 5px;
+    grid-column: 1 / span 2; /*coge la columna 1 y 2*/
+    height: 40px;
+}
+#boton:hover{
+    background-color: #ff6f00;
+}
+#pie{
+    margin:20px 5px 10px 5px;
+    background-color: #0056b3;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 99.5%;
+    height: 40px;
+    border:#0056b3 solid 1px;
+    border-radius: 5px 5px 5px 5px;
+}
+@media screen and (max-width:800px) {
+
+    #cabeza{
+        height: auto;
+        border: 1px solid #0056b3;
+        border-radius: 10px 10px 10px 10px;
+    }
+    #links{
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+    }
+    #cuerpo{
+        flex-direction: column;
+    }
+    #info{
+        width: 100%;
+    }
+    #main{
+        width: 100%;
+        margin:0px;
+    }
+    #main > h2{
+        text-align: center;
+    }
+    #precio{
+        flex-direction: column;
+        align-items: center;
+        height: 30vh;
+        margin:10px 0 10px 0;
+        gap:10px;
+    }
+    .oferta{
+
+        width: 99%;
+    }
+    .oferta:hover{
+        margin-left: 5px;
+        box-shadow: 10px 5px 10px;
+    }
+    form{
+        width: 90%;
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    #boton{
+    grid-column: 1 / 1;
+    }
+}

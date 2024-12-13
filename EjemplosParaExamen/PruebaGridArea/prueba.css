@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px red solid; */
+    outline: 1px red solid;
+
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 10% auto 10%;
+    grid-template-areas:
+        "cabeza cabeza"
+        "lado contenido"
+        "final final";
+    gap: 20px;
+    height: 100vh;
+    overflow-x: hidden;
+
+}
+
+.cabecera {
+    display: flex;
+    background-color: aqua;
+    grid-area: cabeza;
+    justify-content: space-around;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    transition: margin 1s;
+}
+
+.logo img:hover {
+    margin-left: 20px;
+}
+
+.titulo {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton {
+    height: 100%;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.sidebar {
+    display: block;
+    background-color: blue;
+    grid-area: lado;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.sidebar>h1 {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.texto {
+    width: 100%;
+    height: auto;
+}
+
+.cuerpo {
+    background-color: orange;
+    grid-area: contenido;
+    border-radius: 10px 10px 10px 10px;
+    height: 1000px
+}
+
+.dos {
+    background-image: url(teatro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+}
+
+.dos {
+    height: 50%;
+}
+
+.pie {
+    display: flex;
+    background-color: yellow;
+    grid-area: final;
+    border-radius: 10px 10px 10px 10px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .principal {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10%  20% auto 10%;
+    }
+
+    .cabecera {
+        grid-column: 1/-1; /*te coge desde la primera columna
+         hasta la ultima es decir todo*/
+        grid-row: 1/2;
+    }
+
+    .sidebar {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+
+    }
+
+    .cuerpo {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+
+    }
+
+    .pie {
+        grid-column: 1/-1;
+        grid-row: 4/-1;
+
+    }
+
+
+}
